@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/worker",
+    "target": "es2017",
+    "module": "es2020",
+    "lib": [
+      "es2018",
+      "webworker"
+    ],
+    "types": []
+  },
+  "include": [
+    "src/**/*.worker.ts",
+    "src/app/models/message-in.ts",
+    "src/app/models/message-out.ts"
+  ]
+}
