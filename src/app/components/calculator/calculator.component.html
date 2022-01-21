@@ -1,0 +1,20 @@
+<div class="layout">
+    <div class="layout__left">
+        <div class="layout__button-container">
+            <app-button (handleClick)="action1()">Action1</app-button>
+            <app-button (handleClick)="action2()">Action2</app-button>
+            <app-button (handleClick)="action3()">Action3</app-button>
+
+            <a style="color: white; margin-top: 200px" routerLink="/">
+                <app-button>Go back</app-button>
+            </a>
+        </div>
+    </div>
+    <div class="layout__right">
+        <div class="layout__result-container" *ngIf="data$ | async as data">
+            <span class="layout__result-container-el">{{ data.action1 }}</span>
+            <span class="layout__result-container-el">'{{ data.action2 }}'</span>
+            <span class="layout__result-container-el">[{{ data.action3 }}]</span>
+        </div>
+    </div>
+</div>

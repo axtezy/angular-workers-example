@@ -1,0 +1,18 @@
+<div class="layout">
+    <div class="layout__left">
+        <div class="layout__button-container">
+            <app-button (handleClick)="workerCalculation()">Worker calculation</app-button>
+            <app-button (handleClick)="noWorkerCalculation()">No Worker calculation</app-button>
+            <app-button (handleClick)="printString()">Print string</app-button>
+
+            <a style="color: white; margin-top: 200px" routerLink="/calculator">
+                <app-button>Go to calculator</app-button>
+            </a>
+        </div>
+    </div>
+    <div class="layout__right">
+        <div class="layout__result-container">
+            <span class="layout__result-container-el" *ngFor="let el of result">{{ el }}</span>
+        </div>
+    </div>
+</div>

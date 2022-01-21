@@ -1,8 +1,9 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/worker",
+    "target": "es2017",
+    "module": "es2020",
     "lib": [
       "es2018",
       "webworker"
@@ -11,6 +12,7 @@
   },
   "include": [
     "src/**/*.worker.ts",
-    "src/test.worker.ts"
+    "src/app/models/message-in.ts",
+    "src/app/models/message-out.ts"
   ]
 }
